@@ -22,18 +22,18 @@ for(var i = 0; i < buttons.length; i++){
 //adds event listeners on all single item menus
 for(var i = 0; i < oneItemMenu.length; i++){
 	for(var j = 0; j < oneItemMenu[i].length; j++){
-		addEventListenerToOneItemMenuItem(oneItemMenu[i][j], oneItemMenu[i])
+		addOneItemMenuLogic(oneItemMenu[i][j], oneItemMenu[i])
 	}
 }
 
 //adds event listeners on all multiple item menus
 for(var i = 0; i < moreItemMenu.length; i++){
 	for(var j = 0; j < moreItemMenu[i].length; j++){
-		addEventListenerToMoreItemMenuItem(moreItemMenu[i][j])
+		addMoreItemsMenuLogic(moreItemMenu[i][j])
 	}
 }
 
-function addEventListenerToMoreItemMenuItem(item){
+function addMoreItemsMenuLogic(item){
 	item.addEventListener("click", function(){
 		this.classList.toggle("selected");
 	})
@@ -41,7 +41,7 @@ function addEventListenerToMoreItemMenuItem(item){
 
 
 //add event listeners on one item per menu items
-function addEventListenerToOneItemMenuItem(item, menu){
+function addOneItemMenuLogic(item, menu){
 	item.addEventListener("click", function(){
 		//removes "selected" class on all items
 		for(var i = 0; i < menu.length; i++){
