@@ -2,19 +2,23 @@
 
 * {
 	font-family: 'Nunito';
-	transition: all .5s;
+	transition: all .2s;
 }
 
 body {
 	margin: 0;
 	background-color: rgb(245,245,245);
-	overflow-x: hidden;
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
 }
 
 h1 {
 	display: inline;
 	margin: 0;
-	font-size: 5rem;
+	font-size: 11vw;
 	font-family: 'Pacifico';
 	letter-spacing: .75rem;
 	text-transform: capitalize;
@@ -26,11 +30,14 @@ h2 {
 	margin: auto;
 	text-align: center;
 	font-weight: 700;
-	font-size: 3rem;
+	font-size: 9vw;
+}
+
+.blurred {
+	filter: blur(8px);
 }
 
 .navbar {
-	height: 12rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -39,7 +46,7 @@ h2 {
 }
 
 .navbar i {
-	font-size: 4.5rem;
+	font-size: 10vw;
 	color: white;
 	text-shadow: 0px 2px 2px rgba(0, 0, 0, .25);
 
@@ -70,16 +77,62 @@ h2 {
 }
 
 .menu {
+	display: block;
 	background-color: white;
 	position: relative;
 	border-radius: 2rem;
 	padding: 3rem;
 	max-height: 85vh;
-	overflow: unset;
+	overflow: auto;
+}
+
+.menu h2 {
+	font-size: 10vw;
+}
+
+.menu h3 {
+    font-size: 7vw;
+    margin-bottom: 1rem;
+    margin-top: .5rem;
+}
+
+.menu div {
+	margin-bottom: 6rem;
+}
+
+.menu div .item-name {
+	display: block;
+	text-align: left;
+	font-size: 5.5vw;
+	margin: 1rem 1rem;
+	padding: 1rem 2rem;
+	background: rgba(245,245,245 ,1);
+	color: rgba(117,117,117 ,1);
+	border: 4px solid rgba(238,238,238 ,1);
+	border-radius: 2rem;
+	cursor: pointer;
+}
+
+.menu div .item-price {
+	font-size: 4vw;
+	font-weight: 300;
+	float: right;
+}
+
+.selected {
+	background: radial-gradient(ellipse at center, rgba(0,230,119,1) 0%, rgba(0,200,83,1) 100%) !important;
+	border-color: rgba(0,200,83 ,1) !important;
+	color: white !important;
+	font-weight: 700;
+}
+
+.selected .item-price {
+	color: white;
+	font-weight: 400;
 }
 
 .close-menu-button {
-	font-size: 3.5rem;
+	font-size: 7vw;
 	position: absolute;
 	top: 2rem;
 	right: 2rem;
@@ -127,5 +180,26 @@ h2 {
 }
 
 .item span {
-	font-size: 2rem;
+	font-size: 4.5vw;
+}
+
+
+/*bootstrap sm*/
+@media screen (min-width: 728px){
+
+}
+
+/*bootstrap md*/
+@media screen (min-width: 992px){
+
+}
+
+/*bootstrap lg*/
+@media screen (min-width: 1200px){
+
+}
+
+/*bootstrap xl*/
+@media screen (min-width: 1600px){
+
 }
