@@ -7,12 +7,12 @@
 
 body {
 	margin: 0;
-	background-color: rgb(245,245,245);
+	background-color: rgb(245,245,245); 
 }
 
 .stop-scrolling {
-  height: 100%;
-  overflow: hidden;
+  height: 100vh !important;
+  overflow-y: hidden !important;
 }
 
 h1 {
@@ -68,7 +68,7 @@ h2 {
 }
 
 .menu-wrapper {
-	width: 95%;
+	width: 95vw;
 	display: none;
 }
 
@@ -119,9 +119,9 @@ h2 {
 	float: right;
 }
 
-.selected {
+.menu div .selected {
 	background: radial-gradient(ellipse at center, rgba(0,230,119,1) 0%, rgba(0,200,83,1) 100%) !important;
-	border-color: rgba(0,200,83 ,1) !important;
+	border-color: rgba(0,230,119,1) !important;
 	color: white !important;
 	font-weight: 700;
 }
@@ -185,21 +185,97 @@ h2 {
 
 
 /*bootstrap sm*/
-@media screen (min-width: 728px){
+@media (min-width: 574px){
 
 }
 
 /*bootstrap md*/
-@media screen (min-width: 992px){
+@media (min-width: 768px){
 
 }
 
 /*bootstrap lg*/
-@media screen (min-width: 1200px){
+@media (min-width: 992px){
+	h1 {
+		font-size: 5.5vw;
+	}
 
+	.navbar i {
+		font-size: 5vw;
+	}
+
+	h2 {
+		font-size: 4.5vw;
+	}
+
+	.menu-wrapper {
+		width: 80vw;
+	}
+
+	.close-menu-button {
+		font-size: 3.5vw;
+	}
+
+	.menu h2 {
+		font-size: 5vw;
+	}
+
+	.menu h3 {
+		font-size: 3.5vw;
+	}
+
+	.menu div .item-name {
+		font-size: 2.25vw;
+	}
+
+	.menu div .item-price {
+		font-size: 2vw;
+	}
+
+	.item span {
+		font-size: 2.25vw;
+	}
 }
 
 /*bootstrap xl*/
-@media screen (min-width: 1600px){
+@media (min-width: 1200px){
+	h1 {
+		font-size: 3.666666vw;
+	}
 
+	.navbar i {
+		font-size: 3.333333vw;
+	}
+
+	h2 {
+		font-size: 3vw;
+	}
+
+	.menu-wrapper {
+		width: 65vw;
+	}
+
+	.close-menu-button {
+		font-size: 2.333333vw;
+	}
+
+	.menu h2 {
+		font-size: 3.333333vw;
+	}
+
+	.menu h3 {
+		font-size: 3.5vw;
+	}
+
+	.menu div .item-name {
+		font-size: 1.833333vw;
+	}
+
+	.menu div .item-price {
+		font-size: 1.333333vw;
+	}
+
+	.item span {
+		font-size: 1.833333vw;
+	}
 }

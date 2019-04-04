@@ -79,4 +79,5 @@ function toggleMenu(item){
 	wrapper.classList.toggle("visible");
 	container.classList.toggle("dark");
 	homePage.classList.toggle("blurred");
+	body.classList.toggle("stop-scrolling");
 };
