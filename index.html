@@ -9,44 +9,79 @@
 	<title>Senvish</title>
 </head>
 <body>
-	<div id="burgerMenu" class="menu-container">
-		<div class="menu-wrapper">
+	<div id="burgerMenu" class="menu-container dark">
+		<div class="menu-wrapper visible">
 			<div class="container-fluid">
 				<div class="row menu">
 					<i class="fas fa-times close-menu-button"></i>
 					<h2>Senvish Simplu</h2>
 					
 					<h3>Pita™</h3>
-					<div class="bread">
-						<span class="item-name franzela selected">Franzelutza <span class="item-price">1 LEUȚ</span></span>
-						<span class="item-name paineNeagra">Pita™ Neagra <span class="item-price">1 LEUȚ</span></span>
-						<span class="item-name paineGraham">Pita™ Graham <span class="item-price">1 LEUȚ</span></span>
-						<span class="item-name chifla">Chifla <span class="item-price">1 LEUȚ</span></span>
+					<div class="item-type bread">
+						<span price="1" item="franzela" class="item-name selected">
+							Franzelutza <span class="item-price">1 LEUȚ</span></span>
+
+						<span price="1" item="paineNeagra" class="item-name">
+							Pita™ Neagra <span class="item-price">1 LEUȚ</span></span>
+
+						<span price="1" item="paineGraham" class="item-name">
+							Pita™ Graham <span class="item-price">1 LEUȚ</span></span>
+
+						<span price="1" item="chifla" class="item-name">
+							Chifla <span class="item-price">1 LEUȚ</span></span>
 					</div>
 
 					<h3>Mezeluțuri™</h3>
-					<div class="meat">
-						<span class="item-name franzela selected">Burger <span class="item-price">2 LEUȚI</span></span>
-						<span class="item-name paineNeagra">(Florin) Salam<span class="item-price">1 LEUȚ</span></span>
-						<span class="item-name paineGraham">Sunculița<span class="item-price">1 LEUȚ</span></span>
+					<div class="item-type meat">
+						<span price="2" item="burger" class="item-name selected">
+							Burger <span class="item-price">2 LEUȚI</span></span>
+
+						<span price="1" item="salam" class="item-name">
+							(Florin) Salam<span class="item-price">1 LEUȚ</span></span>
+
+						<span price="1" item="sunca" class="item-name">
+							Sunculița<span class="item-price">1 LEUȚ</span></span>
 					</div>
 
 					<h3>Legumuri & Branzuri™</h3>
-					<div class="veggie">
-						<span class="item-name franzela">Salațica<span class="item-price">0.5 LEUȚI</span></span>
-						<span class="item-name paineNeagra">Castraveciori<span class="item-price">0.5 LEUȚI</span></span>
-						<span class="item-name paineGraham">Rosiuțe<span class="item-price">0.5 LEUȚI</span></span>
-						<span class="item-name paineGraham">Cascaval<span class="item-price">1 LEUȚ</span></span>
-						<span class="item-name paineGraham">Cremé de Branza<span class="item-price">1 LEUȚ</span></span>
+					<div class="item-type veggie">
+						<span price="0.5" item="salata" class="item-name">
+							Salațica<span class="item-price">0.5 LEUȚI</span></span>
+
+						<span price="0.5" item="castravete" class="item-name">
+							Castraveciori<span class="item-price">0.5 LEUȚI</span></span>
+
+						<span price="0.5" item="rosie" class="item-name">
+							Rosiuțe<span class="item-price">0.5 LEUȚI</span></span>
+
+						<span price="1" item="cascaval" class="item-name">
+							Cascaval<span class="item-price">1 LEUȚ</span></span>
+
+						<span price="1" item="cremaDeBranza" class="item-name">
+							Cremé de Branza<span class="item-price">1 LEUȚ</span></span>
 					</div>
 					
 					<h3>S.O.S.™</h3>
-					<div class="SOS">
-						<span class="item-name franzela">Salațica<span class="item-price">0.5 LEUȚI</span></span>
-						<span class="item-name paineNeagra">Castraveciori<span class="item-price">0.5 LEUȚI</span></span>
-						<span class="item-name paineGraham">Rosiuțe<span class="item-price">0.5 LEUȚI</span></span>
-					</div>
+					<div class="item-type SOS">
+						<span price="0.5" item="ketchup" class="item-name">
+							Ketchup<span class="item-price">0.5 LEUȚI</span></span>
 
+						<span price="0.5" item="maioneza" class="item-name">
+							Maioneza<span class="item-price">0.5 LEUȚI</span></span>
+
+						<span price="0.5" item="barbecue" class="item-name">
+							Barbecue<span class="item-price">0.5 LEUȚI</span></span>
+
+						<span price="0.5" item="sosBurger" class="item-name">
+							Sos Burger<span class="item-price">0.5 LEUȚI</span></span>
+
+						<span price="0.5" item="picant" class="item-name">
+							Picant<span class="item-price">0.5 LEUȚI</span></span>
+					</div>
+					<div class="total-price">
+						<span class="add-to-cart">Adauga in Cos</span>
+						<span class="price">0.00 LEUȚI</span>
+					</div>
 				</div>
 			</div>			
 		</div>
@@ -54,8 +89,7 @@
 
 	<div id="homePage" class="">
 		<nav class="navbar">
-			<!-- <i class="fas fa-bars"></i> -->
-			<i class="fas fa-ellipsis-h"></i>
+			<i class="fas fa-moon"></i>
 			<h1>senvish</h1>
 			<i class="fas fa-hamburger"></i>
 		</nav>
@@ -66,24 +100,20 @@
 						<div class="item">
 							<img src="images/burger.png">
 							<h2>Senvish Simplu</h2>
-							<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</span>
 						</div>
 					</div>
 					<div id="toastButton" class="col-12 col-lg-6 col-xl-4 item-container">
 						<div class="item">
 							<img src="images/grilled.png">
 							<h2>Senvish Toast</h2>
-							<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</span>
 						</div>
 					</div>
 					<div id="drinksButton" class="col-12 col-lg-6 col-xl-4 item-container">
 						<div class="item">
 							<img src="images/soda.png">
 							<h2>Bauturi</h2>
-							<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</span>
 						</div>
 					</div>
-					
 				</div>
 			</div>
 		</section>

@@ -96,11 +96,11 @@ h2 {
     margin-top: .5rem;
 }
 
-.menu div {
+.menu .item-type {
 	margin-bottom: 6rem;
 }
 
-.menu div .item-name {
+.menu .item-type .item-name {
 	display: block;
 	text-align: left;
 	font-size: 5.5vw;
@@ -113,13 +113,13 @@ h2 {
 	cursor: pointer;
 }
 
-.menu div .item-price {
+.menu .item-type .item-price {
 	font-size: 4vw;
 	font-weight: 300;
 	float: right;
 }
 
-.menu div .selected {
+.menu .item-type .selected {
 	background: radial-gradient(ellipse at center, rgba(0,230,119,1) 0%, rgba(0,200,83,1) 100%) !important;
 	border-color: rgba(0,230,119,1) !important;
 	color: white !important;
@@ -138,6 +138,8 @@ h2 {
 	right: 2rem;
 	color: #f44236;
 }
+
+
 
 .dark {
 	position: fixed;
