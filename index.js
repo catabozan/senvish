@@ -1,4 +1,4 @@
-var buttons = ["burger"];
+var buttons = ["burger", "toast", "drinks"];
 
 //selects menu items
 var bread = document.querySelectorAll(".bread .item-name");
@@ -35,10 +35,12 @@ for(var i = 0; i < moreItemMenu.length; i++){
 
 function addMoreItemsMenuLogic(item){
 	item.addEventListener("click", function(){
+		//adds "selected" class on clicked item
 		this.classList.toggle("selected");
+		//updates price
+		updatePrice();
 	})
 }
-
 
 //add event listeners on one item per menu items
 function addOneItemMenuLogic(item, menu){
@@ -49,6 +51,8 @@ function addOneItemMenuLogic(item, menu){
 		}
 		//adds "selected" class on clicked item
 		this.classList.add("selected");
+		//updates price
+		updatePrice();
 	})
 }
 
@@ -76,8 +80,30 @@ function toggleMenu(item){
 	var wrapper = document.querySelector("#" + item +"Menu" + " .menu-wrapper");
 
 	//toggle classes
-	wrapper.classList.toggle("visible");
 	container.classList.toggle("dark");
+	wrapper.classList.toggle("visible");
 	homePage.classList.toggle("blurred");
 	body.classList.toggle("stop-scrolling");
+	//updates price
+	updatePrice();
 };
+
+//updates price in ".visible" menu
+function updatePrice(){
+	//selects the price <span>
+	var displayPrice = document.querySelector(".visible .total-price .price");
+	//initializes the total price
+	var totalPrice = 0;
+	//selects all ".selected" items in ".visible" menu
+	var selectedItem = document.querySelectorAll(".visible .selected");
+
+	//for every selectedItem
+	for(var i = 0; i < selectedItem.length; i++){
+		//saves "price" attribute into iTemPrice
+		var itemPrice = selectedItem[i].getAttribute("price");
+		//converts "price" attribute into integer and adds it to the totalPrice
+		totalPrice += Number(itemPrice);
+	}
+	//updates content of ".total-price" <span>
+	displayPrice.innerHTML = totalPrice + " LEUȚI";
+}
