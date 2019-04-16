@@ -19,26 +19,24 @@ for(var i = 0; i < buttons.length; i++){
 	addEventListenerToButton(buttons[i]);
 }
 
-//adds event listeners on all single item menus
-for(var i = 0; i < oneItemMenu.length; i++){
-	for(var j = 0; j < oneItemMenu[i].length; j++){
-		addOneItemMenuLogic(oneItemMenu[i][j], oneItemMenu[i])
-	}
-}
+// //adds event listeners on all single item menus
+// for(var i = 0; i < oneItemMenu.length; i++){
+// 	for(var j = 0; j < oneItemMenu[i].length; j++){
+// 		addOneItemMenuLogic(oneItemMenu[i][j], oneItemMenu[i])
+// 	}
+// }
 
-//adds event listeners on all multiple item menus
-for(var i = 0; i < moreItemMenu.length; i++){
-	for(var j = 0; j < moreItemMenu[i].length; j++){
-		addMoreItemsMenuLogic(moreItemMenu[i][j])
-	}
-}
+// //adds event listeners on all multiple item menus
+// for(var i = 0; i < moreItemMenu.length; i++){
+// 	for(var j = 0; j < moreItemMenu[i].length; j++){
+// 		addMoreItemsMenuLogic(moreItemMenu[i][j])
+// 	}
+// }
 
 function addMoreItemsMenuLogic(item){
 	item.addEventListener("click", function(){
 		//adds "selected" class on clicked item
 		this.classList.toggle("selected");
-		//updates price
-		updatePrice();
 	})
 }
 
@@ -52,7 +50,6 @@ function addOneItemMenuLogic(item, menu){
 		//adds "selected" class on clicked item
 		this.classList.add("selected");
 		//updates price
-		updatePrice();
 	})
 }
 
@@ -84,8 +81,6 @@ function toggleMenu(item){
 	wrapper.classList.toggle("visible");
 	homePage.classList.toggle("blurred");
 	body.classList.toggle("stop-scrolling");
-	//updates price
-	updatePrice();
 };
 
 //updates price in ".visible" menu
